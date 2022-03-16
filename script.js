@@ -57,7 +57,7 @@ tryBtn.addEventListener('click', function() {
 })
 
 function alerty() {
-    alert("You've Lost!")
+    alert("You've Lost, Try Again!")
     location.reload()
 }
 function checkLives() {
@@ -74,8 +74,9 @@ function checkLives() {
       if (event.target == indo1) {
         header.style.backgroundColor = bgvalue
         cards.style.backgroundColor = bgvalue
-        rgValue.innerHTML = "Congrats You won!"
+        rgValue.innerHTML = "You've Won Well Played!"
         tryBtn.style.color = bgvalue
+        
        
       } else if (event.target == indo2) {
           indo2.style.visibility = "hidden"
