@@ -56,10 +56,14 @@ tryBtn.addEventListener('click', function() {
     location.reload();
 })
 
+function alerty() {
+    alert("You've Lost!")
+    location.reload()
+}
 function checkLives() {
     if (lives === 0) {
-        alert("You've lost Try Again!")
-        location.reload()
+        setTimeout(alerty, 500)
+      
     }
 }
 
@@ -76,28 +80,33 @@ function checkLives() {
       } else if (event.target == indo2) {
           indo2.style.visibility = "hidden"
           lives--
-          checkLives()
           decrement()
+          checkLives()
+         
       } else if (event.target == indo3) {
         indo3.style.visibility = "hidden"
         lives--
-        checkLives()
         decrement()
+        checkLives()
+      
     } else if (event.target == indo4) {
         indo4.style.visibility = "hidden"
         lives--
-        checkLives()
         decrement()
+        checkLives()
+        
     } else if (event.target == indo5) {
         indo5.style.visibility = "hidden"
         lives--
-        checkLives()
         decrement()
+        checkLives()
+      
     } else if (event.target == indo6) {
         indo6.style.visibility = "hidden"
         lives--
-        checkLives()
         decrement()
+        checkLives()
+       
     } 
 
     } 
