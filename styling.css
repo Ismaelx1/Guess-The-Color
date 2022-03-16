@@ -4,7 +4,8 @@ body {
 }
 .container {
     display: flex;
-    background-color: aquamarine;
+    background-image: linear-gradient(45deg, rgb(140, 202, 165), 
+    rgb(198,159,197), rgb(248, 160, 133), rgb(52,219,216));
     width: 100%;
     height: fit-content;
     flex-direction: column;
@@ -12,7 +13,7 @@ body {
 }
 
 .header {
-    background-color: black;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +51,7 @@ button:hover {
 }
 #cards {
     width: 100%;
-    background-color: black;
+ 
     display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -61,7 +62,7 @@ button:hover {
 #cards > div {
     height: 250px;
     width: 250px;
-    border: 1px solid lightslategray;
+    border: 2px solid white;
     border-radius: 10px;
    margin: 5px 40px 0px 40px;
 }
