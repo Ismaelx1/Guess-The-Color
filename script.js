@@ -48,11 +48,15 @@ indo4.style.order = order4
 indo5.style.order = order5
 indo6.style.order = order6
 
-
 let lives = 3;
 displayer.textContent += lives
+
 function decrement() {
-displayer.textContent = `Number Of Lives: ${lives}`
+    displayer.textContent = `Number Of Lives: ${lives}`
+if (lives === 0) {
+   displayer.textContent = "Number Of Lives: 0"
+
+}
 }
 
 tryBtn.addEventListener('click', function() {
@@ -72,13 +76,14 @@ function checkLives() {
 
     cards.addEventListener('click', colors, false)
     function colors(event) {
-     
-       
       if (event.target == indo1) {
         header.style.backgroundColor = bgvalue
         cards.style.backgroundColor = bgvalue
         rgValue.innerHTML = "You've Won Well Played!"
         tryBtn.style.color = bgvalue
+       
+     
+        return
         
        
       } else if (event.target == indo2) {
@@ -114,5 +119,7 @@ function checkLives() {
     } 
 
     } 
+
+
     
 
