@@ -4,6 +4,7 @@ const tryBtn = document.getElementById('tryAgain')
 const header = document.querySelector('.header')
 const contain = document.querySelector('.container')
 const divs = document.querySelectorAll('#cards > div')
+const displayer = document.querySelector('#display')
 console.log(divs)
 const random1 = Math.floor(Math.random() * 256)
 const random2 = Math.floor(Math.random() * 256)
@@ -45,14 +46,18 @@ indo5.style.order = order5
 indo6.style.order = order6
 
 
-let lives = 0;
+let lives = 3;
+displayer.textContent += lives
+function decrement() {
+displayer.textContent = `Number Of Lives: ${lives}`
+}
 
 tryBtn.addEventListener('click', function() {
     location.reload();
 })
 
 function checkLives() {
-    if (lives === 3) {
+    if (lives === 0) {
         alert("You've lost Try Again!")
         location.reload()
     }
@@ -70,24 +75,29 @@ function checkLives() {
        
       } else if (event.target == indo2) {
           indo2.style.visibility = "hidden"
-          lives++
+          lives--
           checkLives()
+          decrement()
       } else if (event.target == indo3) {
         indo3.style.visibility = "hidden"
-        lives++
+        lives--
         checkLives()
+        decrement()
     } else if (event.target == indo4) {
         indo4.style.visibility = "hidden"
-        lives++
+        lives--
         checkLives()
+        decrement()
     } else if (event.target == indo5) {
         indo5.style.visibility = "hidden"
-        lives++
+        lives--
         checkLives()
+        decrement()
     } else if (event.target == indo6) {
         indo6.style.visibility = "hidden"
-        lives++
+        lives--
         checkLives()
+        decrement()
     } 
 
     } 
