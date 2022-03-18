@@ -8,8 +8,7 @@ const random1 = Math.floor(Math.random() * 256)
 const random2 = Math.floor(Math.random() * 256)
 const random3 = Math.floor(Math.random() * 256)
 const bgvalue = `rgb(${random1}, ${random2}, ${random3})`
-indo1.style.backgroundColor = bgvalue
-rgValue.innerHTML = bgvalue
+
 // Main Card
 
 const indo1 = document.getElementById('index1')
@@ -42,6 +41,9 @@ ordeR(indo3)
 ordeR(indo4)
 ordeR(indo5)
 ordeR(indo6)
+
+indo1.style.backgroundColor = bgvalue
+rgValue.innerHTML = bgvalue
 
 let lives = 3;
 displayer.textContent += lives
